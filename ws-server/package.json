@@ -1,0 +1,13 @@
+{
+  "name": "ws-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ngo275",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

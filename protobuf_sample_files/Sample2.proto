@@ -1,0 +1,7 @@
+syntax = "proto3";
+enum TestEnum {
+    TEST_ENUM_FOO = 0;
+    TESTENUM_BAR = 1;
+    BAZ = 2;
+    BAR = -3;
+}
