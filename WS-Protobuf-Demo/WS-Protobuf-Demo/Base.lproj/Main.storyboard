@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,117 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WS_Protobuf_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o73-4c-Chm">
+                                <rect key="frame" x="168.5" y="244" width="77" height="30"/>
+                                <state key="normal" title="Websocket"/>
+                                <connections>
+                                    <segue destination="h7z-aV-tSW" kind="presentation" id="AcM-fU-Cea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma9-jp-euk">
+                                <rect key="frame" x="175.5" y="354" width="63" height="30"/>
+                                <state key="normal" title="SocketIO"/>
+                                <connections>
+                                    <segue destination="EdK-mE-uAc" kind="presentation" id="pr4-jn-zf3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o73-4c-Chm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZBj-9l-NwU"/>
+                            <constraint firstItem="Ma9-jp-euk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dE5-nb-xfF"/>
+                            <constraint firstItem="o73-4c-Chm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="mWR-yd-kqF"/>
+                            <constraint firstItem="Ma9-jp-euk" firstAttribute="top" secondItem="o73-4c-Chm" secondAttribute="bottom" constant="80" id="tbb-fc-Vru"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web Socket View Controller-->
+        <scene sceneID="cwL-vx-0Er">
+            <objects>
+                <viewController id="h7z-aV-tSW" customClass="WebSocketViewController" customModule="WS_Protobuf_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LzZ-Ij-8v8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBg-8M-zNy">
+                                <rect key="frame" x="356" y="44" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="didTapCancel:" destination="h7z-aV-tSW" eventType="touchUpInside" id="fwF-E3-ab8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wgR-gd-EPV" firstAttribute="trailing" secondItem="YBg-8M-zNy" secondAttribute="trailing" constant="10" id="9pJ-AU-Hrm"/>
+                            <constraint firstItem="YBg-8M-zNy" firstAttribute="top" secondItem="wgR-gd-EPV" secondAttribute="top" id="FQG-Tc-MEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wgR-gd-EPV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47y-ev-gmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="-109"/>
+        </scene>
+        <!--SocketIO View Controller-->
+        <scene sceneID="lUv-4p-Ao9">
+            <objects>
+                <viewController id="EdK-mE-uAc" customClass="SocketIOViewController" customModule="WS_Protobuf_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mK6-cc-IF6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SocketIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is3-SY-ZSE">
+                                <rect key="frame" x="172" y="52" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yp-L0-Dfk">
+                                <rect key="frame" x="0.0" y="73" width="414" height="789"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EdK-mE-uAc" id="RHo-5X-giR"/>
+                                    <outlet property="delegate" destination="EdK-mE-uAc" id="r6I-mZ-VM0"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hT-bU-lcE">
+                                <rect key="frame" x="356" y="43" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="didTapCancel:" destination="EdK-mE-uAc" eventType="touchUpInside" id="s2L-0i-iVJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mCw-D5-yb8" firstAttribute="trailing" secondItem="4yp-L0-Dfk" secondAttribute="trailing" id="DsX-Rx-XF4"/>
+                            <constraint firstItem="mCw-D5-yb8" firstAttribute="bottom" secondItem="4yp-L0-Dfk" secondAttribute="bottom" id="FTC-io-uue"/>
+                            <constraint firstItem="4yp-L0-Dfk" firstAttribute="top" secondItem="is3-SY-ZSE" secondAttribute="bottom" id="HQO-kb-moN"/>
+                            <constraint firstItem="4yp-L0-Dfk" firstAttribute="top" secondItem="0hT-bU-lcE" secondAttribute="bottom" id="ODo-oe-cGg"/>
+                            <constraint firstItem="4yp-L0-Dfk" firstAttribute="leading" secondItem="mCw-D5-yb8" secondAttribute="leading" id="W7d-eG-KWh"/>
+                            <constraint firstItem="is3-SY-ZSE" firstAttribute="top" secondItem="mCw-D5-yb8" secondAttribute="top" constant="8" id="lTR-rz-UBk"/>
+                            <constraint firstItem="is3-SY-ZSE" firstAttribute="centerX" secondItem="mK6-cc-IF6" secondAttribute="centerX" id="nyZ-lO-kCe"/>
+                            <constraint firstItem="mCw-D5-yb8" firstAttribute="trailing" secondItem="0hT-bU-lcE" secondAttribute="trailing" constant="10" id="raE-YY-oMF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mCw-D5-yb8"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4yp-L0-Dfk" id="kFK-Bo-gU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3my-pJ-lFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="596.65178571428567"/>
         </scene>
     </scenes>
 </document>
