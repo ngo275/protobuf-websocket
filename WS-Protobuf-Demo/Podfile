@@ -8,6 +8,7 @@ target 'WS-Protobuf-Demo' do
   # Pods for WS-Protobuf-Demo
   pod 'Socket.IO-Client-Swift'
   pod 'Starscream'
+  pod 'SwiftProtobuf'
 
   target 'WS-Protobuf-DemoTests' do
     inherit! :search_paths

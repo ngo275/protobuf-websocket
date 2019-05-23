@@ -17,6 +17,7 @@
 		2557BCAB2296536800E52D7C /* WS_Protobuf_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557BCAA2296536800E52D7C /* WS_Protobuf_DemoUITests.swift */; };
 		2557BCBA22965C0400E52D7C /* SocketIOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557BCB922965C0400E52D7C /* SocketIOViewController.swift */; };
 		2557BCBD2296614500E52D7C /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557BCBC2296614500E52D7C /* WebSocketViewController.swift */; };
+		2557BCC0229685BD00E52D7C /* DataModel.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557BCBF229685BD00E52D7C /* DataModel.pb.swift */; };
 		6E13C540D6A359E1059C3562 /* Pods_WS_Protobuf_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F703E7E483E4990BC81B44D4 /* Pods_WS_Protobuf_DemoTests.framework */; };
 		D4394B0BDF4AC92A164584F3 /* Pods_WS_Protobuf_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBECB08121E65285A2BE0BC1 /* Pods_WS_Protobuf_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		2557BCAC2296536800E52D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2557BCB922965C0400E52D7C /* SocketIOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOViewController.swift; sourceTree = "<group>"; };
 		2557BCBC2296614500E52D7C /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
+		2557BCBF229685BD00E52D7C /* DataModel.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.pb.swift; sourceTree = "<group>"; };
 		30A31D70799E1D8A2747D885 /* Pods-WS-Protobuf-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WS-Protobuf-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-WS-Protobuf-DemoUITests/Pods-WS-Protobuf-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9195FC64DC9E4AB19BA9AFE0 /* Pods-WS-Protobuf-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WS-Protobuf-Demo.release.xcconfig"; path = "Target Support Files/Pods-WS-Protobuf-Demo/Pods-WS-Protobuf-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B1FEDB0E90B04CDDAE5B2DA7 /* Pods_WS_Protobuf_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WS_Protobuf_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 		2557BC892296536700E52D7C /* WS-Protobuf-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2557BCBE229685AC00E52D7C /* protos */,
 				2557BCBB2296613600E52D7C /* WebSocket */,
 				2557BCB822965BF200E52D7C /* SocketIO */,
 				2557BC8A2296536700E52D7C /* AppDelegate.swift */,
@@ -172,6 +175,14 @@
 				2557BCBC2296614500E52D7C /* WebSocketViewController.swift */,
 			);
 			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		2557BCBE229685AC00E52D7C /* protos */ = {
+			isa = PBXGroup;
+			children = (
+				2557BCBF229685BD00E52D7C /* DataModel.pb.swift */,
+			);
+			path = protos;
 			sourceTree = "<group>";
 		};
 		F57AC8D749CCB6009DADADBF /* Pods */ = {
@@ -329,6 +340,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WS-Protobuf-Demo/Pods-WS-Protobuf-Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -336,6 +348,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -419,6 +432,7 @@
 				2557BCBA22965C0400E52D7C /* SocketIOViewController.swift in Sources */,
 				2557BCBD2296614500E52D7C /* WebSocketViewController.swift in Sources */,
 				2557BC8B2296536700E52D7C /* AppDelegate.swift in Sources */,
+				2557BCC0229685BD00E52D7C /* DataModel.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

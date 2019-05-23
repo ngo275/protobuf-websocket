@@ -61,18 +61,42 @@
                                     <action selector="didTapCancel:" destination="h7z-aV-tSW" eventType="touchUpInside" id="fwF-E3-ab8"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-wf-xqM">
+                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h7z-aV-tSW" id="UNN-sh-hmZ"/>
+                                    <outlet property="delegate" destination="h7z-aV-tSW" id="tNA-zH-xrl"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WebSocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-f3-RGc">
+                                <rect key="frame" x="163" y="52" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wgR-gd-EPV" firstAttribute="trailing" secondItem="YBg-8M-zNy" secondAttribute="trailing" constant="10" id="9pJ-AU-Hrm"/>
+                            <constraint firstItem="ReL-f3-RGc" firstAttribute="top" secondItem="wgR-gd-EPV" secondAttribute="top" constant="8" id="4gf-35-kYn"/>
+                            <constraint firstItem="wgR-gd-EPV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YBg-8M-zNy" secondAttribute="trailing" id="9pJ-AU-Hrm"/>
+                            <constraint firstItem="YBg-8M-zNy" firstAttribute="leading" secondItem="ReL-f3-RGc" secondAttribute="trailing" constant="105" id="Ejf-bw-3Gh"/>
                             <constraint firstItem="YBg-8M-zNy" firstAttribute="top" secondItem="wgR-gd-EPV" secondAttribute="top" id="FQG-Tc-MEP"/>
+                            <constraint firstItem="zVs-wf-xqM" firstAttribute="top" secondItem="YBg-8M-zNy" secondAttribute="bottom" id="K8L-rS-edg"/>
+                            <constraint firstItem="wgR-gd-EPV" firstAttribute="trailing" secondItem="zVs-wf-xqM" secondAttribute="trailing" id="SvX-DS-K6d"/>
+                            <constraint firstItem="wgR-gd-EPV" firstAttribute="bottom" secondItem="zVs-wf-xqM" secondAttribute="bottom" id="W0K-xJ-1vb"/>
+                            <constraint firstItem="zVs-wf-xqM" firstAttribute="leading" secondItem="wgR-gd-EPV" secondAttribute="leading" id="Yua-TX-6BH"/>
+                            <constraint firstItem="ReL-f3-RGc" firstAttribute="centerX" secondItem="LzZ-Ij-8v8" secondAttribute="centerX" id="Zii-BZ-k0H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgR-gd-EPV"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="zVs-wf-xqM" id="Q3I-Yi-wuZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47y-ev-gmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="-109"/>
+            <point key="canvasLocation" x="1472" y="-104"/>
         </scene>
         <!--SocketIO View Controller-->
         <scene sceneID="lUv-4p-Ao9">
@@ -123,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3my-pJ-lFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234.7826086956522" y="596.65178571428567"/>
+            <point key="canvasLocation" x="1472" y="575"/>
         </scene>
     </scenes>
 </document>
